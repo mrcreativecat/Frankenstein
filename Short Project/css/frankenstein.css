@@ -1,0 +1,99 @@
+/* this is where all of your CSS styles go */
+.container{
+	height: 600px;
+	width: 433px;
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	overflow: hidden;
+}
+
+.cover_bg{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.body{
+	position: absolute;
+	animation: body_move 1s alternate infinite;
+	top: 0px;
+	left: 0px;
+}
+
+.head_open{
+	position: absolute;
+	z-index: 6;
+	top: 0px;
+	left: 0px;
+}
+
+.eyes_open{
+	position: absolute;
+	z-index: 4;
+	top: 0px;
+	left: 0px;
+}
+
+.eyes_closed{
+	position: absolute;
+	z-index: 5;
+	animation: eyes_closed 3s infinite alternate;
+	animation-delay: 2s;
+	top: 0px;
+	left: 0px;
+}
+
+.frankenstein_yellow{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.bolts_on{
+	position: absolute;
+	top: 0px;
+	left: 0px;
+}
+
+.bolts_off{
+	position: absolute;
+	animation: bolts_on 1s infinite alternate;
+	animation-fill-mode: forwards;
+	animation-delay: 1s;
+	top: 0px;
+	left: 0px;
+}
+
+.container:hover .frankenstein_yellow{
+	animation: title_on 1s;
+	animation-fill-mode: forwards;
+}
+
+.white{
+	width: 400px;
+	height: 200px;
+}
+
+@keyframes bolts_on{
+	0% {opacity: 0;}
+	100% {opacity: 1;}
+}
+
+@keyframes title_on{
+	0% {opacity: 1;}
+	100% {opacity: 0;}
+}
+
+@keyframes body_move{
+	0% {top: 15px;}
+	100% {top: 30px;}
+}
+
+@keyframes eyes_closed{
+	0% {top: 0px;}
+	10% {top: -20px;}
+	95% {top: -20px;}
+	100% {top: 0px;}
+}
